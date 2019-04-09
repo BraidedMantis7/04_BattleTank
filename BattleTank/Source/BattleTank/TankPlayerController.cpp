@@ -28,7 +28,7 @@ void ATankPlayerController::Tick(float DeltaTime)
 	//Super
 	Super::Tick(DeltaTime);
 	AimTowardsCrosshair();
-	UE_LOG(LogTemp, Warning, TEXT("What is Love!"));
+
 }
 
 ATank* ATankPlayerController :: GetControlledTank() const
@@ -40,7 +40,18 @@ void ATankPlayerController :: AimTowardsCrosshair()
 {
 	if (!GetControlledTank()) { return; }
 
-	//Get World Location through cross hair (Line Trace)
-	//if it hits the landscape 
-		// Tell Controlled tank to aim at this point
+	FVector OutHitLocation; // Out parameter
+	if (GetSightRayHitLocation(OutHitLocation)) // Has "Side Affect",  is going to line trace
+	{
+		UE_LOG(LogTemp, Warning, TEXT("HitLocation: %s"), *OutHitLocation.ToString());
+		// TODO Tell controlled tank to aim at point
+	}
+
+}
+
+bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) const
+{
+	OutHitLocation = FVector(1.0);
+	return true;
+	
 }

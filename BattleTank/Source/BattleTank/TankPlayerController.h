@@ -24,4 +24,7 @@ public:
 	// Start the tank moving the barrel so that a shot would hit where
 	// the cross hair intersects the world
 	void AimTowardsCrosshair();
+private:
+	// Return out parameter, true if hit landscape
+	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 };
