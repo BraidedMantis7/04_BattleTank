@@ -43,8 +43,7 @@ void ATankPlayerController :: AimTowardsCrosshair()
 	FVector OutHitLocation; // Out parameter
 	if (GetSightRayHitLocation(OutHitLocation)) // Has "Side Affect",  is going to line trace
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s"), *OutHitLocation.ToString());
-		// TODO Tell controlled tank to aim at point
+		GetControlledTank()->AimAt(OutHitLocation);
 	}
 
 }
