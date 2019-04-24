@@ -35,8 +35,11 @@ public:
 	void AimAt(FVector OutHitLocation);
 	
 	UFUNCTION(BlueprintCallable,Category = Setup)
-	void SetBarrelReferance(UTankBarrel* BarrelToSet);
+	void SetTurretReferance(UTankTurret* TurretToSet);
 	
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetBarrelReferance(UTankBarrel* BarrelToSet);
+
 	UPROPERTY(EditAnywhere, Category = Firing)
 	float LaunchSpeed = 100000.0; //TODO Find sensible default launch speed
 };
