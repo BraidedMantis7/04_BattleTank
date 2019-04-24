@@ -6,6 +6,7 @@
 #include "TankAimingComponent.generated.h"
 // Forward Declaration
 class UTankBarrel;
+class UTankAimingComponent;
 
 // Holds parameters for barrel property
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
