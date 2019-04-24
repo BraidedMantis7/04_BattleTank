@@ -4,11 +4,12 @@
 #include "TankBarrel.h"
 
 
-void UTankBarrel::Elevate(float DegreesPerSecond)
+void UTankBarrel::Elevate(float RelativeSpeed)
 {
 
 	// Move the barrel the right amount this frame
-	UE_LOG(LogTemp, Warning, TEXT("Barrel->Elevate Called"));
 	// Given a max elevation speed, and frame time
+
+
 }
 
