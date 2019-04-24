@@ -5,6 +5,7 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+
 UCLASS()
 class BATTLETANK_API ATank : public APawn
 {
@@ -34,7 +35,7 @@ public:
 	void AimAt(FVector OutHitLocation);
 	
 	UFUNCTION(BlueprintCallable,Category = Setup)
-	void SetBarrelReferance(UStaticMeshComponent* BarrelToSet);
+	void SetBarrelReferance(UTankBarrel* BarrelToSet);
 	
 	UPROPERTY(EditAnywhere, Category = Firing)
 	float LaunchSpeed = 100000.0; //TODO Find sensible default launch speed
